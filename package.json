@@ -1,0 +1,23 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "Social Networking API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhastings1/Social-Network-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhastings1/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/nhastings1/Social-Network-API#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
