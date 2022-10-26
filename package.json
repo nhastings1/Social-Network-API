@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/nhastings1/Social-Network-API#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.0",
+    "nodemon": "^2.0.20"
   }
 }
