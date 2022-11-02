@@ -1,7 +1,7 @@
 const { User } = require("../models");
 
 module.exports = {
-  // Get ALL users
+ 
   getAllUsers(req, res) {
     User.find()
       .select("-__v")
@@ -11,7 +11,7 @@ module.exports = {
       })
   },
 
-  // Get user by ID
+  
   getUserById(req, res) {
     User.findOne({ _id: req.params.id })
       .populate({
@@ -29,7 +29,7 @@ module.exports = {
       })
   },
 
-  // Create a new User
+  
   createUser(req, res) {
     User.create(req.body)
       .then(data => res.json(data))
@@ -38,7 +38,7 @@ module.exports = {
       })
   },
 
-  // Add a friend
+  
   addFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
@@ -57,7 +57,7 @@ module.exports = {
       })
   },
 
-  // Update User
+ 
   updateUser(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.id },
@@ -75,7 +75,7 @@ module.exports = {
       })
   },
 
-  // Delete User
+ 
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.id })
       .then(data => {
@@ -90,7 +90,7 @@ module.exports = {
       })
   },
 
-  // Remove friend from list
+
   removeFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },

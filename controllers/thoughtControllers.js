@@ -1,7 +1,7 @@
 const { Thought, User } = require("../models");
 
 module.exports = {
-  // Get ALL Thoughts
+ 
   getAllThoughts(req, res) {
     Thought.find()
       .populate({
@@ -15,7 +15,7 @@ module.exports = {
       })
   },
 
-  // Get Thought by ID
+
   getThoughtById(req, res) {
     Thought.findOne({ _id: req.params.id })
       .populate({
@@ -29,7 +29,7 @@ module.exports = {
       })
   },
 
-  // Create Thought
+ 
   createThought({ params, body }, res) {
     Thought.create(body)
       .then(({ _id }) => {
@@ -50,7 +50,7 @@ module.exports = {
       })
   },
 
-  // Update Thought by ID
+  
   updateThoughtById(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.id },
@@ -68,7 +68,7 @@ module.exports = {
       })
   },
 
-  // Delete Thought by ID
+  
   deleteThought(req, res) {
     Thought.findOneAndDelete(
       { _id: req.params.id }
@@ -84,7 +84,7 @@ module.exports = {
       })
   },
 
-  // Add reaction
+  
   addReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -102,7 +102,7 @@ module.exports = {
       })
   },
 
-  // Delete Reaction
+
   deleteReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },

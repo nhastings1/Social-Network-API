@@ -33,10 +33,10 @@ const thoughtSchema = new Schema({
   }
 );
 
-// Initialize our model
+
 const Thought = model("Thought", thoughtSchema);
 
-// Gets amount of reactions
+
 thoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
